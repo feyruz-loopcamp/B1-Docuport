@@ -17,6 +17,9 @@ public class DocuportApiUtil {
                 "\"password\": \"" + password + "\"\n" +
                 "}";
 
+        System.out.println(jsonBody);
+        System.out.println(Environment.BASE_URL + "/api/v1/authentication/account/authenticate");
+
         String accessToken = given().accept(ContentType.JSON)
                 .and().contentType(ContentType.JSON)
                 .and().body(jsonBody)
